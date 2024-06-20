@@ -1,0 +1,156 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:InfectionPower": {
+    "NAME": "Infection",
+    "DESCRIPTIONS": [
+      "At the end of the turn take #b",
+      " damage and reduce [#FFA200]Infection by #b2."
+    ]
+  },
+  "${modID}:TimeSifterPower": {
+    "NAME": "Memory Sifting",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yAccelerate.",
+      "At the start of your turn, #yAccelerate ",
+      " times."
+    ]
+  },
+  "${modID}:DeterminationPower": {
+    "NAME": "Rage Escalating",
+    "DESCRIPTIONS": [
+      "Whenever a debuff is applied to you, gain #b", " #yStrength."
+    ]
+  },
+  "${modID}:DrawLessNextTurnPower": {
+    "NAME": "Draw Reduction",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card next turn.",
+      " less cards next turn."
+    ]
+  },
+  "${modID}:DrawOnAttackPower": {
+    "NAME": "Draw From Attack",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " #yAttacks played this turn draw a card.",
+      "The next #yAttack played this turn draws a card."
+    ]
+  },
+  "${modID}:AddCopyNextTurnPower": {
+    "NAME": "Gaining Card",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, add ",
+      " into your hand."
+    ]
+  },
+  "${modID}:DeveloperFormPower": {
+    "NAME": "Developer Form",
+    "DESCRIPTIONS": [
+      "At the start of each turn, discard any number of cards and draw that many.",
+      "At the start of each turn, discard any number of cards and draw that many ",
+      " times."
+    ]
+  },
+  "${modID}:LoseThornsPower": {
+  "NAME": "Thorns Down",
+  "DESCRIPTIONS": [
+    "Lose #b",
+    " #yThorns at the start of your next turn."
+  ]
+  },
+  "${modID}:CoalescencePower": {
+    "NAME": "Coalescence",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yRetain up to #b",
+      " Card.",
+      " Cards."
+    ]
+  },
+  "${modID}:TemperingProtocolPower": {
+    "NAME": "Tempering Protocol",
+    "DESCRIPTIONS": [
+      "Whenever you lose #yDexterity, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${modID}:StunnedPower": {
+    "NAME": "Stunned",
+    "DESCRIPTIONS": [
+      "Skip your next turn.",
+      "Skip your next #b",
+      " turns."
+    ]
+  },
+  "${modID}:AncientConstructPower": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yArtifact",
+      " at the start of your turn if you have no #yArtifact."
+    ]
+  },
+  "${modID}:SoulburnPower": {
+    "NAME": "Soulburn",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns, loses #b",
+      " turn, loses #b",
+      " HP, then #ySoulburn is removed."
+    ]
+  },
+  "${modID}:NicotineAddictionPower": {
+    "NAME": "Nicotine Addiction",
+    "DESCRIPTIONS": [
+      "Whenever you activate a #yDead #yOn effect, you gain #b",
+      " #ySoulburn."]
+  },
+  "${modID}:NicoretteBarrelPower": {
+    "NAME": "Nicorette Barrel",
+    "DESCRIPTIONS": [
+      "Whenever you play a card with #yDead #yOn, apply #b",
+      " #ySoulburn to ALL enemies."]
+  },
+  "${modID}:WardingSigilPower": {
+    "NAME": "Warding Sigil",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yWeak or #yVulnerable, inflict it to ALL enemies.",
+      "Whenever you gain #yWeak or #yVulnerable, inflict #b",
+      " times as much to ALL enemies."
+    ]
+  },
+  "${modID}:UploadTroublePower": {
+    "NAME": "Upload Trouble",
+    "DESCRIPTIONS": [
+      "The first card you play each turn refunds its cost and is #yExhausted.",
+      "The first #b",
+      " cards you play each turn refund their cost and are #yExhausted."
+    ]
+  },
+  "${modID}:GhostlyFormalityPower": {
+    "NAME": "Formal Cramping",
+    "DESCRIPTIONS": [
+      "If you are #yIntangible, at the start of your turn, lose ",
+      ""
+    ]
+  },
+  "${modID}:BronzeReinforcementPower": {
+    "NAME": "Bronze Reinforcement",
+    "DESCRIPTIONS": [
+      "#yPlated #yArmor cannot be reduced by more than 3 per turn by enemy attacks."
+    ]
+  },
+  "${modID}:EntrenchmentPower": {
+    "NAME": "Entrenched",
+    "DESCRIPTIONS": [
+      "Whenever a card leaves #yStasis, gain #b",
+      " #yPlated #yArmor."
+    ]
+  }
+
+}

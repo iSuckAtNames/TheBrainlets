@@ -1,0 +1,14 @@
+{
+    "Brainlets:UIOptions": {
+      "TEXT": [
+        "Choose a Card to place into Stasis.",
+        "Pick a Gem.",
+        "Add a Common Gem to your deck",
+        "place into Stasis.",
+        "~ERROR:~ Cannot #rAttack in Construction Mode.",
+        "Stasis slots are full.",
+        "Add a Gem to your deck",
+        ""
+      ]
+    }
+}

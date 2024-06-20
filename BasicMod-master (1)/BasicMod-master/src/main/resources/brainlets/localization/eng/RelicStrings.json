@@ -1,0 +1,17 @@
+{
+  "${modID}:pingForRun": {
+    "NAME": "Ping For Run",
+    "FLAVOR": "A simple and effective way to signal the beginning of a run.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a random Attack and Skill from your draw pile to your hand."
+    ]
+  },
+  "${modID}:GreatSpireCollabRun": {
+    "NAME": "Ping For Run",
+    "FLAVOR": "Too many cooks do not spoil the broth, or perhaps 10 isn't too many.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] NL At the start of each turn, draw 2 cards and discard 1 card."
+    ]
+  }
+}

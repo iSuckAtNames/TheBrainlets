@@ -1,0 +1,346 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:ChooseYourStart": {
+    "NAME": "Choose Your Start",
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL Gain !${modID}:M2! ${modID}:Infection."
+  },
+  "${modID}:MarkThePath": {
+    "NAME": "Mark The Path",
+    "DESCRIPTION": "Deal !D! damage. NL Place a random card from your hand into ${modID}:Stasis. NL ${modID}:Dead_On: Shuffle !M! Voids into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place a card from your hand into ${modID}:Stasis. NL ${modID}:Dead_On: Shuffle !M! Voids into your draw pile."
+  },
+  "${modID}:MementosBlade": {
+    "NAME": "Memento's Blade",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to EVERYONE."
+  },
+  "${modID}:MinorBeams": {
+    "NAME": "Minor Beams",
+    "DESCRIPTION": "Deal !D! damage. NL Add a 1 cost copy of this card to your hand with Ethereal and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an *Upgraded 1 cost copy of this card to your hand with Ethereal and Exhaust."
+  },
+  "${modID}:GhostlyMittens": {
+    "NAME": "Ghostly Mittens",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL When Exhausted, apply !M! Vulnerable to ALL enemies."
+  },
+  "${modID}:PowerSurge": {
+    "NAME": "Power Surge",
+    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw 2 less cards.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw 2 less cards. NL Reduce each of your debuffs by 1."
+  },
+  "${modID}:SmashAndSave": {
+    "NAME": "Smash and Save",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Accelerate ALL cards in ${modID}:Stasis."
+  },
+  "${modID}:SiftingThroughMemories": {
+    "NAME": "Memory Sifting",
+    "DESCRIPTION": "At the start of each turn, ${modID}:Accelerate.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, ${modID}:Accelerate."
+  },
+  "${modID}:RaceToTheBottom": {
+    "NAME": "Race To The Bottom",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Vulnerable, Weak, and Frail."
+  },
+  "${modID}:NobJumpscare": {
+    "NAME": "Nob Jumpscare",
+    "DESCRIPTION": "Deal !D! damage. NL If you are Vulnerable, attack twice."
+  },
+  "${modID}:RageEscalating": {
+    "NAME": "Rage Escalating",
+    "DESCRIPTION": "Whenever a debuff is applied to you, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a debuff is applied to you, gain 1 Strength.",
+    "FLAVOR": "Right on the road to your sadness..."
+  },
+  "${modID}:OpeningWrath": {
+    "NAME": "Opening Wrath",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! to the damaged enemy's Weak and Vulnerable."
+  },
+  "${modID}:DetailedEssay": {
+    "NAME": "Detailed Essay",
+    "DESCRIPTION": "Gain !B! Block. NL The next !M! Attacks you play this turn draw a card."
+  },
+  "${modID}:BossHatred": {
+    "NAME": "Boss Hatred",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL If the enemy has negative Focus, gain [E] [E]."
+  },
+  "${modID}:NextBuildFix": {
+    "NAME": "Next Build Fix",
+    "DESCRIPTION": "Gain !M! temporary Strength. NL *Exhaust a card. NL Next turn, gain a copy of the *Exhausted card.",
+    "EXTENDED_DESCRIPTION": ["Exhaust a card for Next Build Fix."]
+  },
+  "${modID}:SuspendingDisbelief": {
+    "NAME": "Suspending Disbelief",
+    "DESCRIPTION": "Gain !B! Block. NL If your ${modID}:Stasis slots are full, gain [E] and draw !M! card."
+  },
+  "${modID}:WorkingToFloat": {
+    "NAME": "Working To Float",
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL When *Exhausted, add a 0 cost copy of this card to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Plated *Armor. NL When *Exhausted, add an *Upgraded 0 cost copy of this card to your hand."
+  },
+  "${modID}:PassItAround": {
+    "NAME": "Pass It Around",
+    "DESCRIPTION": "Fleeting. NL Lose a random non-boss \"Upon pickup\" Relic. NL At the end of combat, get a copy of it.",
+    "EXTENDED_DESCRIPTION": [
+      "No eligible relics to pass around."
+    ]
+  },
+  "${modID}:DeveloperForm": {
+    "NAME": "Developer Form",
+    "DESCRIPTION": "Ethereal. NL At the start of each turn, discard any number of cards and draw that many.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, discard any number of cards and draw that many."
+  },
+  "${modID}:MistakesOfThePast": {
+    "NAME": "Mistakes of the Past",
+    "DESCRIPTION": "Ethereal. ${modID}:Afterlife. NL Gain !B! Block. NL When *Exhausted, NL gain !M! ${modID}:Blur."
+  },
+  "${modID}:InfectedStrike": {
+    "NAME": "Infected Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${modID}:Infection."
+  },
+  "${modID}:InfectedShield": {
+    "NAME": "Infected Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${modID}:Infection."
+  },
+  "${modID}:MoraleBooster": {
+    "NAME": "Morale Booster",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! temporary Strength."
+  },
+  "${modID}:ProbingJab": {
+    "NAME": "Probing Jab",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! temporary Dexterity."
+  },
+  "${modID}:Wash": {
+    "NAME": "Wash",
+    "DESCRIPTION": "Gain !B! Block. NL Reduce each of your debuffs by !M!."
+  },
+  "${modID}:LeapingSlam": {
+    "NAME": "Leaping Slam",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${modID}:Infection to ALL enemies. NL If you have ${modID}:Infection, repeat these effects once."
+  },
+  "${modID}:ParryingFlail": {
+    "NAME": "Parrying Flail",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !${modID}:M2! temporary Thorns."
+  },
+  "${modID}:Amalgamation": {
+    "NAME": "Amalgamation",
+    "DESCRIPTION": "Gain !M! temporary Dexterity. NL Retain up to !${modID}:M2! cards this turn."
+  },
+  "${modID}:InfectiousCascade": {
+    "NAME": "Infectious Cascade",
+    "DESCRIPTION": "Apply !M! Vulnerable and !${modID}:M2! ${modID}:Infection to ALL enemies. NL Exhaust."
+  },
+  "${modID}:ToughCleanse": {
+    "NAME": "Tough Cleanse",
+    "DESCRIPTION": "Gain !B! Block. NL Reduce each of your debuffs by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Reduce each of your debuffs by !M!."
+  },
+  "${modID}:VirtuousRepentance": {
+    "NAME": "Virtuous Repentance",
+    "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
+  },
+  "${modID}:BlessingOfHeritage": {
+    "NAME": "Blessing of Heritage",
+    "DESCRIPTION": "Gain !M! temporary Strength, Dexterity, and Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain !M! temporary Strength, Dexterity, and Thorns. NL Reduce each of your debuffs by 1."
+  },
+  "${modID}:TemperingProtocol": {
+    "NAME": "Tempering Protocol",
+    "DESCRIPTION": "Whenever you lose Dexterity, gain !M! Block."
+  },
+  "${modID}:Slashnado": {
+    "NAME": "Slashnado",
+    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies. NL Skip your next turn."
+  },
+  "${modID}:InfectionSpreading": {
+    "NAME": "Infection Spreading",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${modID}:Infection, increased by your own ${modID}:Infection."
+  },
+  "${modID}:SurvivalInstincts": {
+    "NAME": "Survival Instincts",
+    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Weak, Frail, and ${modID}:Infection."
+  },
+  "${modID}:DubiousConstruct": {
+    "NAME": "Dubious Construct",
+    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "Cleaning Construct",
+      "duplicate."
+    ]
+  },
+  "${modID}:SeepingInfection": {
+    "NAME": "Seeping Infection",
+    "DESCRIPTION": "If you have ${modID}:Infection, add !M! *Mistakes *of *the *Past to your hand.",
+    "UPGRADE_DESCRIPTION": "If you have ${modID}:Infection, add !M! *Upgraded *Mistakes *of *the *Past to your hand."
+  },
+  "${modID}:Footshot": {
+    "NAME": "Footshot",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Dead_On: Deal half damage."
+  },
+  "${modID}:DesperateAssault": {
+    "NAME": "Desperate Assault",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Soulburn. NL Exhaust 2 random cards in your hand."
+  },
+  "${modID}:Prestidigitation": {
+    "NAME": "Prestidigitation",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to EVERYONE."
+  },
+  "${modID}:BeerFromNowhere": {
+    "NAME": "Beer From Nowhere",
+    "DESCRIPTION": "Drink a random common potion. NL Add a Wound to your draw pile. NL ${modID}:Dead_On: Add 2 more. NL Exhaust."
+  },
+  "${modID}:WhirringInThought": {
+    "NAME": "Whirring In Thought",
+    "DESCRIPTION": "Draw !M! cards. NL Discard !${modID}:M2! random cards."
+  },
+  "${modID}:LossOfComposure": {
+    "NAME": "Loss Of Composure",
+    "DESCRIPTION": "Remove ALL Block from EVERYONE. NL Deal !D! damage."
+  },
+  "${modID}:CocktailFlare": {
+    "NAME": "Cocktail Flare",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust up to !M! card. NL Gain !${modID}:M2! Frail.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust up to !M! cards. NL Gain !${modID}:M2! Frail."
+  },
+  "${modID}:MagicBullets": {
+    "NAME": "Magic Bullets",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Add 2 copies of this card into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL Add 2 *Upgraded copies of this card into your hand."
+  },
+  "${modID}:DrunkenDarts": {
+    "NAME": "Drunken Darts",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL ${modID}:Dead_On: This card hits you instead."
+  },
+  "${modID}:ThornyNettles": {
+    "NAME": "Thorny Nettles",
+    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Dead_On: EVERYONE gains !M! *Thorns."
+  },
+  "${modID}:ExclusionZone": {
+    "NAME": "Exclusion Zone",
+    "DESCRIPTION": "EVERYONE gains !B! Block. NL ${modID}:Dead_On: Lose !M! Block.",
+    "FLAVOR": "Get in the box."
+  },
+  "${modID}:NicoretteBarrel": {
+    "NAME": "Nicorette Barrel",
+    "DESCRIPTION": "Whenever you play a card with ${modID}:Dead_On, apply !M! ${modID}:Soulburn to ALL enemies. NL Whenever you trigger a ${modID}:Dead_On effect, gain !M! ${modID}:Soulburn."
+  },
+  "${modID}:WardingSigil": {
+    "NAME": "Warding Sigil",
+    "DESCRIPTION": "Whenever you gain Weak or Vulnerable, inflict it to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you gain Weak or Vulnerable, inflict it to ALL enemies."
+  },
+  "${modID}:DesperatePrayer": {
+    "NAME": "Desperate Prayer",
+    "DESCRIPTION": "Copy your hand. NL Deal damage equal to !M! times the number of cards copied. NL Exhaust."
+  },
+  "${modID}:HotTakes": {
+    "NAME": "Hot Takes",
+    "DESCRIPTION": "Apply !M! ${modID}:Soulburn to ALL enemies. NL ${modID}:Dead_On: Add 2 Burns to your hand."
+  },
+  "${modID}:BeyondThePain": {
+    "NAME": "Beyond The Pain",
+    "DESCRIPTION": "For each card in your exhaust pile, a random enemy loses !M! HP."
+  },
+  "${modID}:UploadTrouble": {
+    "NAME": "Upload Trouble",
+    "DESCRIPTION": "The first card played each turn refunds its cost and is Exhausted.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first card played each turn refunds its cost and is Exhausted."
+  },
+  "${modID}:GhostlyFormality": {
+    "NAME": "Ghostly Formality",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Intangible. NL While you are Intangible, at the start of each turn, lose 1 [E]."
+  },
+  "${modID}:SuspendingSlam": {
+    "NAME": "Suspending Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Place a card in your hand into ${modID}:Stasis."
+  },
+  "${modID}:FortifyingStrike": {
+    "NAME": "Fortifying Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! *Plated *Armor."
+  },
+  "${modID}:RelentlessLash": {
+    "NAME": "Relentless Lash",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Place this card into ${modID}:Stasis. NL ${modID}:Stasis lasts 2 turns."
+  },
+  "${modID}:SpeedyPlating": {
+    "NAME": "Speedy Plating",
+    "DESCRIPTION": "Gain !M! *Plated *Armor. NL ${modID}:Accelerate.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Plated *Armor. NL ${modID}:Accelerate twice."
+  },
+  "${modID}:DataRecovery": {
+    "NAME": "Data Recovery",
+    "DESCRIPTION": "Gain !B! Block. NL Place a card from your discard pile into ${modID}:Stasis."
+  },
+  "${modID}:BrakingBlast": {
+    "NAME": "Braking Blast",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt. NL ${modID}:Decelerate."
+  },
+  "${modID}:WildBeams": {
+    "NAME": "Wild Beams",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat per card in ${modID}:Stasis."
+  },
+  "${modID}:TickDownDefenses": {
+    "NAME": "Tick-Down Defenses",
+    "DESCRIPTION": "Gain !M! *Plated *Armor. ${modID}:Tick - Gain !${modID}:M2! *Plated *Armor. NL Exhaust."
+  },
+  "${modID}:Pushback": {
+    "NAME": "Pushback",
+    "DESCRIPTION": "Gain !B! Block. NL ${modID}:Tick - Draw !M! card."
+  },
+  "${modID}:ChargingPower": {
+    "NAME": "Charging Power",
+    "DESCRIPTION": "Place this card into ${modID}:Stasis. NL ${modID}:Tick - Gain !B! Block and !M! Strength. NL When this card would leave ${modID}:Stasis, Exhaust it."
+  },
+  "${modID}:BronzeReinforcement": {
+    "NAME": "Bronze Reinforcement",
+    "DESCRIPTION": "*Plated *Armor cannot be reduced by more than 3 per turn from enemy attacks."
+  },
+  "${modID}:PlannedOut": {
+    "NAME": "Planned Out",
+    "DESCRIPTION": "Draw !M! card. NL Place the top !${modID}:M2! cards of your draw pile into ${modID}:Stasis.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Place the top !${modID}:M2! cards of your draw pile into ${modID}:Stasis."
+  },
+  "${modID}:LeechingSpeed": {
+    "NAME": "Leeching Speed",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Accelerate once per 5 damage dealt by this card."
+  },
+  "${modID}:RollingSlam": {
+    "NAME": "Rolling Slam",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to !M! times your *Plated *Armor. Lose ALL your *Plated *Armor.",
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to !M! times your *Plated *Armor. Lose half your *Plated *Armor."
+  },
+  "${modID}:SiphonedSurge": {
+    "NAME": "Siphoned Surge",
+    "DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate ALL cards in ${modID}:Stasis.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate."
+  },
+  "${modID}:Compression": {
+    "NAME": "Compressions",
+    "DESCRIPTION": "Spend ALL your Block to gain half as much *Plated *Armor. NL Exhaust."
+  },
+  "${modID}:DimensionalStorage": {
+    "NAME": "Dimensional Storage",
+    "DESCRIPTION": "Gain !M! ${modID}:Stasis slots."
+  },
+  "${modID}:Entrenchment": {
+    "NAME": "Entrenchment",
+    "DESCRIPTION": "Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor."
+  }
+}
+
