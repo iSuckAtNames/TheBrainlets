@@ -177,7 +177,7 @@
   },
   "${modID}:DubiousConstruct": {
     "NAME": "Dubious Construct",
-    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact.",
+    "DESCRIPTION": "Gain !${modID}:M2! Artifact. NL At the start of your turn, if you have no Artifact, gain !M! Artifact.",
     "EXTENDED_DESCRIPTION": [
       "Cleaning Construct",
       "duplicate."
@@ -206,7 +206,7 @@
   },
   "${modID}:WhirringInThought": {
     "NAME": "Whirring In Thought",
-    "DESCRIPTION": "Draw !M! cards. NL Discard !${modID}:M2! random cards."
+    "DESCRIPTION": "Draw !M! cards. NL Discard !${modID}:M2! cards."
   },
   "${modID}:LossOfComposure": {
     "NAME": "Loss Of Composure",
@@ -254,7 +254,7 @@
   },
   "${modID}:BeyondThePain": {
     "NAME": "Beyond The Pain",
-    "DESCRIPTION": "For each card in your exhaust pile, a random enemy loses !M! HP."
+    "DESCRIPTION": "For each card in your Exhaust pile, a random enemy loses !M! HP."
   },
   "${modID}:UploadTrouble": {
     "NAME": "Upload Trouble",
@@ -263,7 +263,7 @@
   },
   "${modID}:GhostlyFormality": {
     "NAME": "Ghostly Formality",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Intangible. NL While you are Intangible, at the start of each turn, lose 1 [E]."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Intangible. NL While you are Intangible, at the start of each turn, lose [E]."
   },
   "${modID}:SuspendingSlam": {
     "NAME": "Suspending Slam",
@@ -308,7 +308,8 @@
   },
   "${modID}:BronzeReinforcement": {
     "NAME": "Bronze Reinforcement",
-    "DESCRIPTION": "*Plated *Armor cannot be reduced by more than 3 per turn from enemy attacks."
+    "DESCRIPTION": "*Plated *Armor cannot be reduced by more than 3 per turn from enemy attacks.",
+    "UPGRADE_DESCRIPTION": "Innate. NL *Plated *Armor cannot be reduced by more than 3 per turn from enemy attacks."
   },
   "${modID}:PlannedOut": {
     "NAME": "Planned Out",
@@ -326,12 +327,13 @@
   },
   "${modID}:SiphonedSurge": {
     "NAME": "Siphoned Surge",
-    "DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate ALL cards in ${modID}:Stasis.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate."
+    "DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate ALL cards in ${modID}:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw !${modID}:M2! cards. NL ${modID}:Decelerate. NL Exhaust."
   },
   "${modID}:Compression": {
-    "NAME": "Compressions",
-    "DESCRIPTION": "Spend ALL your Block to gain half as much *Plated *Armor. NL Exhaust."
+    "NAME": "Compression",
+    "DESCRIPTION": "Spend ALL your Block to gain half as much *Plated *Armor. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Spend ALL your Block to gain that much *Plated *Armor. NL Exhaust."
   },
   "${modID}:DimensionalStorage": {
     "NAME": "Dimensional Storage",
@@ -339,8 +341,7 @@
   },
   "${modID}:Entrenchment": {
     "NAME": "Entrenchment",
-    "DESCRIPTION": "Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor."
+    "DESCRIPTION": "Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor."
   }
 }
 

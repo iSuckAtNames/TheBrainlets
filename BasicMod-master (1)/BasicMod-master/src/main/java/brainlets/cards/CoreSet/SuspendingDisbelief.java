@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 public class SuspendingDisbelief extends BaseCard {
     public static final String ID = makeID("SuspendingDisbelief");
 
-    private static final int BLOCK = 4;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 8;
     private static final int MAGIC = 1;
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(

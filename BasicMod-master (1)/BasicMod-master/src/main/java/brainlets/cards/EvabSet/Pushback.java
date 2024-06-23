@@ -1,6 +1,7 @@
 package brainlets.cards.EvabSet;
 
 import brainlets.cards.BaseCard;
+import brainlets.cards.InStasisCard;
 import brainlets.character.theBrainlets;
 import brainlets.orbs.StasisOrb;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static brainlets.BasicMod.TICK;
 
-public class Pushback extends BaseCard {
+public class Pushback extends BaseCard implements InStasisCard {
     public static final String ID = makeID("Pushback");
     private static final int BLOCK = 8;
     private static final int UPG_BLOCK = 3;

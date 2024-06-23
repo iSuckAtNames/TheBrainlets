@@ -32,12 +32,20 @@ public class TemperingProtocol extends BaseCard {
 
     public TemperingProtocol() {
         super(ID,info);
-        setMagic(3,2);
+        setMagic(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new TemperingProtocolPower(p, magicNumber), magicNumber));
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+        }
     }
 
     @Override

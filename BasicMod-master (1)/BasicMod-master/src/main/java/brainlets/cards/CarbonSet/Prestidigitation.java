@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class Prestidigitation extends BaseCard {
     public static final String ID = makeID("Prestidigitation");
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 4;
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(

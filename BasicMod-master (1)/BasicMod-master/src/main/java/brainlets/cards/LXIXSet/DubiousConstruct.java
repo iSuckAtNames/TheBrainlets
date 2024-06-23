@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 public class DubiousConstruct extends BaseCard {
     public static final String ID = makeID("DubiousConstruct");
@@ -33,10 +34,12 @@ public class DubiousConstruct extends BaseCard {
     public DubiousConstruct() {
         super(ID,info);
         setMagic(1);
+        setCustomVar("M2", 1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p,p, new ArtifactPower(p, customVar("M2"))));
         addToBot(new ApplyPowerAction(p, p, new AncientConstructPower(p,p, magicNumber), magicNumber));
     }
 

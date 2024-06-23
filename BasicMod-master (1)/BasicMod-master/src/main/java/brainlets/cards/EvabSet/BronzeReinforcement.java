@@ -15,19 +15,21 @@ public class BronzeReinforcement extends BaseCard {
 
     public static final String NAME;
     public static final String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
     private static final CardStrings cardStrings;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
             theBrainlets.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
             AbstractCard.CardType.POWER,
             AbstractCard.CardRarity.UNCOMMON,
             AbstractCard.CardTarget.SELF,
-            2
+            0
     );
 
     public BronzeReinforcement() {
@@ -42,7 +44,9 @@ public class BronzeReinforcement extends BaseCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.isInnate = true;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -25,8 +25,8 @@ public class RaceToTheBottom extends BaseCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final int DAMAGE = 69;
-    private static final int UPG_DAMAGE = 12;
+    private static final int DAMAGE = 48;
+    private static final int UPG_DAMAGE = 21;
 
     private static final int MAGIC = 2;
 

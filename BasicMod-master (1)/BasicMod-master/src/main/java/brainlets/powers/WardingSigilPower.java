@@ -19,7 +19,7 @@ import static brainlets.BasicMod.makeID;
 public class WardingSigilPower extends BasePower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = makeID("DeterminationPower");
+    public static final String POWER_ID = makeID("WardingSigilPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -59,14 +59,14 @@ public class WardingSigilPower extends BasePower implements CloneablePowerInterf
         if (power.ID.equals(WeakPower.POWER_ID) && target == this.owner && !target.hasPower("Artifact")) {
             for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                 for (int i = 0; i < amount; i++) {
-                    addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)mo, (AbstractCreature)p, (AbstractPower)new WeakPower((AbstractCreature)mo, power.amount, false), power.amount, true, AbstractGameAction.AttackEffect.POISON));
+                    addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, power.amount, false), power.amount, true, AbstractGameAction.AttackEffect.POISON));
                 }
             }
         }
         if (power.ID.equals(VulnerablePower.POWER_ID) && target == this.owner && !target.hasPower("Artifact")) {
             for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                 for (int i = 0; i < amount; i++) {
-                    addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)mo, (AbstractCreature)p, (AbstractPower)new VulnerablePower((AbstractCreature)mo, power.amount, false), power.amount, true, AbstractGameAction.AttackEffect.POISON));
+                    addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, power.amount, false), power.amount, true, AbstractGameAction.AttackEffect.POISON));
                 }
             }
         }

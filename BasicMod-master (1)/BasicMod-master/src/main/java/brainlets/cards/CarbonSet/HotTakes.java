@@ -17,8 +17,8 @@ import static brainlets.BasicMod.DEADON;
 public class HotTakes extends BaseCard {
     public static final String ID = makeID("HotTakes");
 
-    private static final int MAGIC = 35;
-    private static final int UPG_MAGIC = 10;
+    private static final int MAGIC = 50;
+    private static final int UPG_MAGIC = 19;
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
             theBrainlets.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.

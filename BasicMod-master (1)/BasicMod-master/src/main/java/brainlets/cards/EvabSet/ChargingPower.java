@@ -1,6 +1,7 @@
 package brainlets.cards.EvabSet;
 
 import brainlets.cards.BaseCard;
+import brainlets.cards.InStasisCard;
 import brainlets.character.theBrainlets;
 import brainlets.orbs.StasisOrb;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static brainlets.BasicMod.*;
 
-public class ChargingPower extends BaseCard {
+public class ChargingPower extends BaseCard implements InStasisCard {
     public static final String ID = makeID("ChargingPower");
 
     private static final int MAGIC = 1;
@@ -41,12 +42,13 @@ public class ChargingPower extends BaseCard {
         addToBot(new TalkAction(p, "DESTROY! DESTROY! DESTROY!"));
     }
 
-    public void onStartOfTurn(StasisOrb orb) {
+    public void onStartOfTurn(StasisOrb o) {
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new GainBlockAction(p,p, block));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
     }
 
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

@@ -42,7 +42,7 @@ public class Slashnado extends BaseCard {
             addToBot((AbstractGameAction)new VFXAction((AbstractCreature)p, (AbstractGameEffect)new CleaveEffect(), 0.1F));
             addToBot((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
-        this.addToBot(new ApplyPowerAction(p, p, new StunnedPower(p, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new StunnedPower(p, 1), 1));
     }
 
     @Override

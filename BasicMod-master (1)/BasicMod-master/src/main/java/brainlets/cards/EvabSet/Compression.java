@@ -17,6 +17,7 @@ public class Compression extends BaseCard {
     public static final String ID = makeID("Compression");
 
     public static final String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
     private static final CardStrings cardStrings;
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
             theBrainlets.Enums.CARD_COLOR,
@@ -29,24 +30,27 @@ public class Compression extends BaseCard {
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
     public Compression() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
+        setMagic(2,-1);
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, (p.currentBlock)/2), (p.currentBlock)/2));
+        addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, (p.currentBlock)/magicNumber), (p.currentBlock)/magicNumber));
         addToBot((AbstractGameAction)new RemoveAllBlockAction((AbstractCreature)p, (AbstractCreature)p));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
-            this.initializeDescription();
+            upgradeMagicNumber(-1);
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 

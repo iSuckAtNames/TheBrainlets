@@ -1,7 +1,11 @@
 package brainlets.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import brainlets.util.GeneralUtils;
+import brainlets.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -17,6 +21,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import vfx.ExplosionSmallEffectGreen;
 
 import static brainlets.BasicMod.makeID;
+import static brainlets.BasicMod.modID;
+import static brainlets.character.theBrainlets.Enums.TheBrainlets;
 
 public class SoulburnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
     public static final String POWER_ID = makeID("SoulburnPower");
@@ -34,6 +40,20 @@ public class SoulburnPower extends TwoAmountPower implements CloneablePowerInter
         amount2 = 3;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
+        String unPrefixed = GeneralUtils.removePrefix(POWER_ID);
+            Texture normalTexture = TextureLoader.getPowerTexture(unPrefixed);
+            Texture hiDefImage = TextureLoader.getHiDefPowerTexture(unPrefixed);
+            if (hiDefImage != null)
+            {
+                region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
+                if (normalTexture != null)
+                    region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
+            }
+            else if (normalTexture != null)
+            {
+                this.img = normalTexture;
+                region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
+            }
         this.updateDescription();
     }
 

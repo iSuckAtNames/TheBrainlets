@@ -17,10 +17,10 @@ public class Wash extends BaseCard {
     public static final String DESCRIPTION;
     private static final CardStrings cardStrings;
 
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK = 4;
+    private static final int BLOCK = 11;
 
     private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
     //END TUNING CONSTANTS
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
@@ -39,8 +39,8 @@ public class Wash extends BaseCard {
 
     public Wash() {
         super(ID, info);
-        setBlock(BLOCK,UPG_BLOCK);
-        setMagic(MAGIC);
+        setBlock(BLOCK);
+        setMagic(MAGIC, UPG_MAGIC);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

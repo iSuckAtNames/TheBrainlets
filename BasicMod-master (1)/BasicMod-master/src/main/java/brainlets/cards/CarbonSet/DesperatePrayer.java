@@ -46,8 +46,10 @@ public class DesperatePrayer extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int counter = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            addToTop(new MakeTempCardInHandAction(c.makeStatEquivalentCopy()));
-            counter++;
+            if (!(c instanceof DesperatePrayer)) {
+                addToTop(new MakeTempCardInHandAction(c.makeStatEquivalentCopy()));
+                counter++;
+            }
         }
         addToBot(new DamageAction(m, new DamageInfo(p, counter*magicNumber, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }

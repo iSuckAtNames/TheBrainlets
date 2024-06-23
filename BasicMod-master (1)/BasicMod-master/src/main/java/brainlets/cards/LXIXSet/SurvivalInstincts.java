@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 public class SurvivalInstincts extends BaseCard {
     public static final String ID = makeID("SurvivalInstincts");
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 11;
     private static final int UPG_BLOCK = 2;
     private static final int MAGIC = 1;
 

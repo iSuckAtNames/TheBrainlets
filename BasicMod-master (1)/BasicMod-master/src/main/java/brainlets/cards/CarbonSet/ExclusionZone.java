@@ -37,7 +37,7 @@ public class ExclusionZone extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-            addToBot(new GainBlockAction(m, p, block));
+            addToBot(new GainBlockAction(mo, p, block));
         }
         if (isDeadOn()) {
             addToBot(new SelfDamageAction(new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));

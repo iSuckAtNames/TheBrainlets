@@ -14,8 +14,8 @@ import static brainlets.BasicMod.DEADON;
 
 public class DrunkenDarts extends BaseCard {
     public static final String ID = makeID("DrunkenDarts");
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 4;
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
             theBrainlets.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
             CardType.ATTACK,

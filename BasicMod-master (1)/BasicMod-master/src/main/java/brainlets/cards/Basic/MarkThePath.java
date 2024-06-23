@@ -23,7 +23,7 @@ public class MarkThePath extends BaseCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 4;
 
     private static final int MAGIC = 2;
@@ -54,15 +54,15 @@ public class MarkThePath extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (isDeadOn()) {
+            addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
+        }
         if (!upgraded) {
             this.addToBot(new PlaceRandomCardInHandIntoStasisAction(p));
         } else {
             this.addToBot(new PlaceCardsInHandIntoStasisAction(p, 1, false));
         }
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (isDeadOn()) {
-            addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
-        }
     }
 
     public void triggerOnGlowCheck() {

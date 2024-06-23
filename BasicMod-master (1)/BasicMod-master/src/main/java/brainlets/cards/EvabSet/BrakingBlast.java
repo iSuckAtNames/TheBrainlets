@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class BrakingBlast extends BaseCard {
     public static final String ID = makeID("BrakingBlast");
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 2;
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(

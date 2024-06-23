@@ -38,7 +38,7 @@ public class RollingSlam extends BaseCard {
 
     public RollingSlam() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setMagic(2);
+        setMagic(3,2);
         this.isMultiDamage = true;
     }
 
@@ -57,6 +57,7 @@ public class RollingSlam extends BaseCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(2);
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

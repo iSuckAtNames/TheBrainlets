@@ -34,22 +34,12 @@ public class Entrenchment extends BaseCard {
 
     public Entrenchment() {
         super(ID,info);
-        setMagic(1);
+        setMagic(1,1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new EntrenchmentPower(p, magicNumber), magicNumber));
-    }
-
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
-        }
     }
 
     @Override

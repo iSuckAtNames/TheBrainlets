@@ -38,12 +38,12 @@ public class WhirringInThought extends BaseCard {
     public WhirringInThought() {
         super(ID, info);
         setMagic(6);
-        setCustomVar("M2", 4, -1);
+        setCustomVar("M2", 5, -1);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
-        addToBot((AbstractGameAction)new DiscardAction((AbstractCreature)p, (AbstractCreature)p, customVar("M2"), true));
+        addToBot((AbstractGameAction)new DiscardAction((AbstractCreature)p, (AbstractCreature)p, customVar("M2"), false));
 
     }
 

@@ -24,7 +24,7 @@ public class NextBuildFix extends BaseCard {
 
     public NextBuildFix() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setMagic(3,2);
+        setMagic(4,2);
     }
 
     @Override

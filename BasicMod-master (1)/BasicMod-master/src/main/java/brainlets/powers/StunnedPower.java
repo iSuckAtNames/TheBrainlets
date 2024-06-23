@@ -16,8 +16,6 @@ import static brainlets.BasicMod.makeID;
 public class StunnedPower extends BasePower implements CloneablePowerInterface{
     public static final String POWER_ID = makeID("StunnedPower");
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
-
-    public static String[] DESCRIPTIONS;
     public int storedHandSize;
     private AbstractCreature source;
 
@@ -28,9 +26,7 @@ public class StunnedPower extends BasePower implements CloneablePowerInterface{
         super(POWER_ID, POWER_TYPE, TURN_BASED, owner, amount);
         this.owner = owner;
         this.img = TextureLoader.getTexture("images/stslib/powers/32/stun.png");
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-
         updateDescription();
 
     }
@@ -63,11 +59,12 @@ public class StunnedPower extends BasePower implements CloneablePowerInterface{
     }
 
 
+    @Override
     public void updateDescription() {
         if (this.amount <= 1) {
             this.description = DESCRIPTIONS[0];
         } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
     }
 

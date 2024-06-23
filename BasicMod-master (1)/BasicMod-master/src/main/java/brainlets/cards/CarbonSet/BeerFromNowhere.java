@@ -64,7 +64,7 @@ public class BeerFromNowhere extends BaseCard {
                 for (AbstractRelic relic: AbstractDungeon.player.relics)
                     relic.onUsePotion();
                 UIStrings potionStrings = CardCrawlGame.languagePack.getUIString(modID + ":Potions");
-                addToBot(new TalkAction(true, potionStrings.TEXT[0] + potion.name + potionStrings.TEXT[1], 2.5f, 2.5f));
+                addToBot(new TalkAction(true, "Here's a " + potion.name, 2.5f, 2.5f));
                 isDone = true;
             }
         });

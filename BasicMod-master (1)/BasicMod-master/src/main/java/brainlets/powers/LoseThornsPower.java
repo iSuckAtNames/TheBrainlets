@@ -15,8 +15,6 @@ public class LoseThornsPower extends BasePower implements CloneablePowerInterfac
     public static final String POWER_ID = makeID("LoseThornsPower");
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
 
-    public static String[] DESCRIPTIONS;
-
     private static final boolean TURN_BASED = true;
 
     public LoseThornsPower(AbstractCreature owner, int amount) {
@@ -25,18 +23,18 @@ public class LoseThornsPower extends BasePower implements CloneablePowerInterfac
         this.owner = owner;
         this.type = POWER_TYPE;
         this.amount = amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         updateDescription();
 
     }
 
 
+    @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-
+    @Override
     public void atStartOfTurn() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, LoseThornsPower.POWER_ID));
