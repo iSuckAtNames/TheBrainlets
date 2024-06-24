@@ -18,7 +18,7 @@ public class ToughCleanse extends BaseCard {
     public static String UPGRADED_DESCRIPTION;
     private static final CardStrings cardStrings;
 
-    private static final int BLOCK = 4;
+    private static final int BLOCK = 5;
 
     private static final int MAGIC = 2;
     //END TUNING CONSTANTS

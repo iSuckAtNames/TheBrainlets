@@ -7,7 +7,7 @@
     ]
   },
   "${modID}:GreatSpireCollabRun": {
-    "NAME": "Ping For Run",
+    "NAME": "Great Spire Collab Run",
     "FLAVOR": "Too many cooks do not spoil the broth, or perhaps 10 isn't too many.",
     "DESCRIPTIONS": [
       "Replaces ",

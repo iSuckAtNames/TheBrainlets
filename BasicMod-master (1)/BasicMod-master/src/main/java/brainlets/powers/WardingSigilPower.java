@@ -48,9 +48,11 @@ public class WardingSigilPower extends BasePower implements CloneablePowerInterf
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-
+        if (this.amount == 1) {
+            description = DESCRIPTIONS[0];
+        } else {
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override

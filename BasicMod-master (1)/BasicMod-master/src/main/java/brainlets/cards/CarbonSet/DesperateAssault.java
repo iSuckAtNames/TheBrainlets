@@ -37,7 +37,7 @@ public class DesperateAssault extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new ApplyPowerAction(m, p, new SoulburnPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new SoulburnPower(m, magicNumber), magicNumber));
         addToBot(new ExhaustAction(2, true, false, false));
     }
 

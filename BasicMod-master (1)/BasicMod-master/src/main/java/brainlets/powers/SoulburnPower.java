@@ -84,11 +84,11 @@ public class SoulburnPower extends TwoAmountPower implements CloneablePowerInter
         }
     }// 70
 
-    public void explode(){
+    public void explode() {
         this.flashWithoutSound();
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new LoseHPAction(this.owner, this.owner, amount, AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

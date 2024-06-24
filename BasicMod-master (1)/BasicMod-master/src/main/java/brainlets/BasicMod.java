@@ -315,7 +315,7 @@ public class BasicMod implements
                 return true;
             }
         }
-        UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
+        UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Brainlets:UIOptions");
         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
 
         return false;

@@ -95,7 +95,7 @@
   },
   "${modID}:PassItAround": {
     "NAME": "Pass It Around",
-    "DESCRIPTION": "Fleeting. NL Lose a random non-boss \"Upon pickup\" Relic. NL At the end of combat, get a copy of it.",
+    "DESCRIPTION": "Fleeting. NL At the end of combat, gain a random non-boss \"Upon pickup\" Relic.",
     "EXTENDED_DESCRIPTION": [
       "No eligible relics to pass around."
     ]
