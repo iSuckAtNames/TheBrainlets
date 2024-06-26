@@ -1,12 +1,14 @@
 package brainlets.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import brainlets.relics.TheWhiteMothsEmbrace;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -23,7 +25,9 @@ public class InfectionPower extends BasePower implements CloneablePowerInterface
     public void atEndOfTurn(boolean isPlayer) {
         flash();
         addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS)));
-        addToBot(new ReducePowerAction(this.owner, this.owner, this, 2));
+        if (this.owner != AbstractDungeon.player || !(AbstractDungeon.player.hasRelic(TheWhiteMothsEmbrace.ID))) {
+            addToBot(new ReducePowerAction(this.owner, this.owner, this, 2));
+        }
     }
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

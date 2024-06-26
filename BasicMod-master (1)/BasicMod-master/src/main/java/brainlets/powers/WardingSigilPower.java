@@ -1,6 +1,7 @@
 package brainlets.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static brainlets.BasicMod.makeID;
 
-public class WardingSigilPower extends BasePower implements CloneablePowerInterface {
+public class WardingSigilPower extends BasePower implements CloneablePowerInterface, OnReceivePowerPower{
     public AbstractCreature source;
 
     public static final String POWER_ID = makeID("WardingSigilPower");
@@ -56,7 +57,8 @@ public class WardingSigilPower extends BasePower implements CloneablePowerInterf
     }
 
     @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source)
+    {
         AbstractPlayer p = AbstractDungeon.player;
         if (power.ID.equals(WeakPower.POWER_ID) && target == this.owner && !target.hasPower("Artifact")) {
             for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
@@ -72,6 +74,7 @@ public class WardingSigilPower extends BasePower implements CloneablePowerInterf
                 }
             }
         }
+        return true;
     }
 
     @Override

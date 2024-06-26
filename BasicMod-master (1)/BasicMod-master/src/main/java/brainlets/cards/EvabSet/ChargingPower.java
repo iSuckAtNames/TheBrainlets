@@ -39,7 +39,7 @@ public class ChargingPower extends BaseCard implements InStasisCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new TalkAction(p, "DESTROY! DESTROY! DESTROY!"));
+        addToBot(new TalkAction(true, "DESTROY! DESTROY! DESTROY!", 2.5f, 2.5f));
     }
 
     public void onStartOfTurn(StasisOrb o) {
@@ -52,7 +52,8 @@ public class ChargingPower extends BaseCard implements InStasisCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.cost = 1;
+            this.costForTurn = 1;
         }
     }
 

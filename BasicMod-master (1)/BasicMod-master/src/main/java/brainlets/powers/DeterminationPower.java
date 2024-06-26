@@ -1,6 +1,7 @@
 package brainlets.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import static brainlets.BasicMod.makeID;
 
 
-public class DeterminationPower extends BasePower implements CloneablePowerInterface {
+public class DeterminationPower extends BasePower implements CloneablePowerInterface, OnReceivePowerPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = makeID("DeterminationPower");
@@ -51,10 +52,12 @@ public class DeterminationPower extends BasePower implements CloneablePowerInter
     }
 
     @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == AbstractPower.PowerType.DEBUFF && target == this.owner && !target.hasPower("Artifact")) {
+    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source)
+    {
+        if (power.type==PowerType.DEBUFF) {
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, amount), amount));
         }
+        return true;
     }
 
     @Override

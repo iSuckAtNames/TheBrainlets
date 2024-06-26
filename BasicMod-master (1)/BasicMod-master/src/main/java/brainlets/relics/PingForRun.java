@@ -38,7 +38,4 @@ public class PingForRun extends BaseRelic {
         this.grayscale = false;
     }
 
-    public AbstractRelic makeCopy() {
-        return new PingForRun();
-    }
 }

@@ -8,5 +8,27 @@
       " into a description.",
       " Exactly how depends on the potion, and you can set it up however you want."
     ]
+  },
+  "${modID}:TamePotion": {
+    "NAME": "Tame Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock.",
+      " Gain #b2 #yWeak, #yFrail, and #yInfection."
+    ]
+  },
+  "${modID}:BottleOfSoap": {
+    "NAME": "Bottle Of Soap",
+    "DESCRIPTIONS": [
+      "Reduce each of your debuffs by #b",
+      "."
+    ]
+  },
+  "${modID}:ClassicalElixir": {
+    "NAME": "Classical Elixir",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStasis slots."
+    ]
   }
 }

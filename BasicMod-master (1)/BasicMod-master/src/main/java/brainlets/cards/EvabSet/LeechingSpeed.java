@@ -1,10 +1,8 @@
 package brainlets.cards.EvabSet;
 
-import brainlets.actions.AccelerateRightMostCardAction;
+import brainlets.actions.LeechingSpeedAction;
 import brainlets.cards.BaseCard;
 import brainlets.character.theBrainlets;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -41,11 +39,7 @@ public class LeechingSpeed extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        int timesToAccelerate = (m.lastDamageTaken)/5;
-        for (int i = 0; i < timesToAccelerate; i++) {
-            addToBot(new AccelerateRightMostCardAction());
-        }
+        addToBot(new LeechingSpeedAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
     }
 
     @Override

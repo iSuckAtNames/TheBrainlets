@@ -38,7 +38,7 @@ public class HotTakes extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new ApplyPowerAction(m, p, new SoulburnPower(m, magicNumber), magicNumber));
+            addToBot(new ApplyPowerAction(q, p, new SoulburnPower(q, magicNumber), magicNumber));
         }
         if (isDeadOn()) {
             addToBot((AbstractGameAction)new MakeTempCardInHandAction((AbstractCard)new Burn(), 2));

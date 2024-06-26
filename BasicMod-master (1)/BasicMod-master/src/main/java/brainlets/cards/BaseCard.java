@@ -8,10 +8,13 @@ import brainlets.orbs.StasisOrb;
 import brainlets.patches.EndOfTurnPatch;
 import brainlets.patches.SoulburnPatch;
 import brainlets.powers.NicotineAddictionPower;
+import brainlets.relics.StolenSpyglass;
 import brainlets.util.CardStats;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,10 +23,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.function.BiFunction;
 
@@ -717,6 +722,16 @@ public abstract class BaseCard extends CustomCard {
         // Effects that are repeated.
         for (int a = 0; a < DeadOnTimes; a++) {
             DeadOnEffect(p,m);
+            //Trigger Stolen Spyglass if this is the first Dead On effect this turn.
+            Iterator findGlass = AbstractDungeon.player.relics.iterator();
+            while(findGlass.hasNext()) {
+                AbstractRelic c = (AbstractRelic)findGlass.next();
+                if (c.relicId.equals(StolenSpyglass.ID) && c.counter > 0) {
+                        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, c));
+                        this.addToBot(new GainEnergyAction(1));
+                        c.counter--;
+                }
+            }
         }
 
     }

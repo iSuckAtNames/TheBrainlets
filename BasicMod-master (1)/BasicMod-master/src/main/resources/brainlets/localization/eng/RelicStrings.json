@@ -3,7 +3,7 @@
     "NAME": "Ping For Run",
     "FLAVOR": "A simple and effective way to signal the beginning of a run.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a random Attack and Skill from your draw pile to your hand."
+      "At the start of combat, add a random Attack and Skill from your draw pile to your hand."
     ]
   },
   "${modID}:GreatSpireCollabRun": {
@@ -12,6 +12,48 @@
     "DESCRIPTIONS": [
       "Replaces ",
       ".[] NL At the start of each turn, draw 2 cards and discard 1 card."
+    ]
+  },
+  "${modID}:InfectedBalloon": {
+    "NAME": "Infected Balloon",
+    "FLAVOR": "Bloorp!",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b2 Temporary #yStrength and #b2 Temporary #yDexterity."
+    ]
+  },
+  "${modID}:PyroChamber": {
+    "NAME": "Pyro Chamber",
+    "FLAVOR": "Hot off the presses!",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain 1 #yStasis slot. NL Whenever a card leaves #yStasis, apply #b4 #ySoulburn to ALL enemies."
+    ]
+  },
+  "${modID}:Flywheel": {
+    "NAME": "Flywheel",
+    "FLAVOR": "Helps preserve momentum.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, #yAccelerate."
+    ]
+  },
+  "${modID}:StolenSpyglass": {
+    "NAME": "Stolen Spyglass",
+    "FLAVOR": "Stolen as it was stolen before.",
+    "DESCRIPTIONS": [
+      "The first time each turn you play a #yDead #yOn card, gain [E]."
+    ]
+  },
+  "${modID}:TheWhiteMothsEmbrace": {
+    "NAME": "The White Moth's Embrace",
+    "FLAVOR": "The Radiance only ever wanted to be loved...",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Your #yInfection doesn't decrease at the end of your turn."
+    ]
+  },
+  "${modID}:CarbonsSkillbook": {
+    "NAME": "Carbon's Skillbook",
+    "FLAVOR": "Filled with pages upon pages of nonsense strings of text.",
+    "DESCRIPTIONS": [
+      "ALL cards cost 1, except for X cost and #yUnplayable cards. NL Future card rewards have #b1 additional card to choose from. NL Upon pickup, obtain a Prismatic Shard."
     ]
   }
 }

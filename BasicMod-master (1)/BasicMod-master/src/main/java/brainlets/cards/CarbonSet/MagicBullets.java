@@ -50,7 +50,7 @@ public class MagicBullets extends BaseCard {
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
-        addToBot(new MakeTempCardInHandAction(makeStatEquivalentCopy(), 2));
+        addToBot(new MakeTempCardInHandAction(makeCopy(), 2));
     }
 
     @Override

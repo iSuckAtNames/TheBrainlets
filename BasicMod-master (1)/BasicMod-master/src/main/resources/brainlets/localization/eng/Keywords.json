@@ -79,5 +79,20 @@
     "infection"
   ],
   "DESCRIPTION": "Infected creatures take damage at the end of their turn. Each turn, Infection is reduced by #b2."
+  },
+  {
+    "PROPER_NAME": "Pickup",
+    "NAMES": [
+      "pickup"
+    ],
+    "DESCRIPTION": "A relic selected randomly between Pear, Whetstone, War Paint, Potion Belt, and Lee's Waffle. There is a very small possibility of Tiny House."
+  },
+  {
+    "PROPER_NAME": "Ocean",
+    "NAMES": [
+      "ocean"
+    ],
+    "DESCRIPTION": "Returned to its jar."
   }
+
 ]
