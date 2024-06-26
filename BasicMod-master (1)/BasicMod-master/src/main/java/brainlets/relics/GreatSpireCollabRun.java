@@ -19,8 +19,7 @@ public class GreatSpireCollabRun extends BaseRelic {
     }
 
     public String getUpdatedDescription() {
-        String name = new PingForRun().name;
-        return DESCRIPTIONS[0] + name + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + DESCRIPTIONS[1];
     }
 
     @Override

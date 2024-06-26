@@ -10,7 +10,7 @@
     "NAME": "Great Spire Collab Run",
     "FLAVOR": "Too many cooks do not spoil the broth, or perhaps 10 isn't too many.",
     "DESCRIPTIONS": [
-      "Replaces ",
+      "Replaces #rPing #rfor #rRun",
       ".[] NL At the start of each turn, draw 2 cards and discard 1 card."
     ]
   },
@@ -39,7 +39,7 @@
     "NAME": "Stolen Spyglass",
     "FLAVOR": "Stolen as it was stolen before.",
     "DESCRIPTIONS": [
-      "The first time each turn you play a #yDead #yOn card, gain [E]."
+      "The first time each turn you play a #yDead #yOn card, gain [E]"
     ]
   },
   "${modID}:TheWhiteMothsEmbrace": {
