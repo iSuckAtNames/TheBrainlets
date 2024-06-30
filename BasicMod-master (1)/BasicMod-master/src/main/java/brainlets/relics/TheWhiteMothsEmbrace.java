@@ -46,6 +46,6 @@ public class TheWhiteMothsEmbrace extends BaseRelic{
 
 
     public AbstractRelic makeCopy() {
-        return new StolenSpyglass();
+        return new TheWhiteMothsEmbrace();
     }
 }

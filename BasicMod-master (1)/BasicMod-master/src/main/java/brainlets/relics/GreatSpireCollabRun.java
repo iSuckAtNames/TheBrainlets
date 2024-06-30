@@ -41,7 +41,7 @@ public class GreatSpireCollabRun extends BaseRelic {
         }
     }
 
-    public void atTurnStart() {
+    public void atTurnStartPostDraw() {
         addToBot(new DrawCardAction(2));
         addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player,1, false));
     }

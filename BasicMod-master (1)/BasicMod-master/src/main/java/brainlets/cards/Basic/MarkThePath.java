@@ -55,7 +55,7 @@ public class MarkThePath extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isDeadOn()) {
-            addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
+            TriggerDeadOnEffect(p,m);
         }
         if (!upgraded) {
             this.addToBot(new PlaceRandomCardInHandIntoStasisAction(p));
@@ -80,6 +80,11 @@ public class MarkThePath extends BaseCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
     }
 
     @Override

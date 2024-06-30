@@ -315,7 +315,7 @@
   },
   "${modID}:LeechingSpeed": {
     "NAME": "Leeching Speed",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Accelerate once per 5 damage dealt by this card."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Accelerate once per 5 unblocked damage dealt by this card."
   },
   "${modID}:RollingSlam": {
     "NAME": "Rolling Slam",

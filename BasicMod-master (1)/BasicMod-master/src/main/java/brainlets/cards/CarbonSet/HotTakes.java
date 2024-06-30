@@ -3,7 +3,6 @@ package brainlets.cards.CarbonSet;
 import brainlets.cards.BaseCard;
 import brainlets.character.theBrainlets;
 import brainlets.powers.SoulburnPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,8 +40,13 @@ public class HotTakes extends BaseCard {
             addToBot(new ApplyPowerAction(q, p, new SoulburnPower(q, magicNumber), magicNumber));
         }
         if (isDeadOn()) {
-            addToBot((AbstractGameAction)new MakeTempCardInHandAction((AbstractCard)new Burn(), 2));
+            TriggerDeadOnEffect(p,m);
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new MakeTempCardInHandAction(new Burn(), 2));
     }
 
     public void triggerOnGlowCheck() {

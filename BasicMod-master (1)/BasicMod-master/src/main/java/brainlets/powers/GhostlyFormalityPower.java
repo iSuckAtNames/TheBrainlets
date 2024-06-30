@@ -48,9 +48,9 @@ public class GhostlyFormalityPower extends BasePower implements CloneablePowerIn
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        if (this.owner.hasPower(IntangiblePlayerPower.POWER_ID)) {
-            addToBot((AbstractGameAction)new LoseEnergyAction(this.amount));
-            flash();
+        if (this.owner.hasPower(IntangiblePlayerPower.POWER_ID) && this.owner.getPower(IntangiblePlayerPower.POWER_ID).amount > 1) {
+                addToBot((AbstractGameAction)new LoseEnergyAction(this.amount));
+                flash();
         }
     }
 

@@ -39,7 +39,7 @@
     "NAME": "Stolen Spyglass",
     "FLAVOR": "Stolen as it was stolen before.",
     "DESCRIPTIONS": [
-      "The first time each turn you play a #yDead #yOn card, gain [E]"
+      "The first time each turn you trigger a #yDead #yOn effect, gain [E]"
     ]
   },
   "${modID}:TheWhiteMothsEmbrace": {
@@ -53,7 +53,7 @@
     "NAME": "Carbon's Skillbook",
     "FLAVOR": "Filled with pages upon pages of nonsense strings of text.",
     "DESCRIPTIONS": [
-      "ALL cards cost 1, except for X cost and #yUnplayable cards. NL Future card rewards have #b1 additional card to choose from. NL Upon pickup, obtain a Prismatic Shard."
+      "ALL cards cost #b1, except for X cost and #yUnplayable cards. NL Future card rewards have #b1 additional card to choose from. NL Upon pickup, if you do not have one already, obtain a Prismatic Shard."
     ]
   }
 }

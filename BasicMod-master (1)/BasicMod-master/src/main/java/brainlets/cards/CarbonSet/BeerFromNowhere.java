@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -70,8 +71,13 @@ public class BeerFromNowhere extends BaseCard {
         });
         addToBot(new MakeTempCardInDrawPileAction(new Wound(),1, true, true));
         if (isDeadOn()) {
-            addToBot(new MakeTempCardInDrawPileAction(new Wound(),2, true, true));
+            TriggerDeadOnEffect(p,m);
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new MakeTempCardInDrawPileAction(new Wound(),2, true, true));
     }
 
     public void upgrade() {

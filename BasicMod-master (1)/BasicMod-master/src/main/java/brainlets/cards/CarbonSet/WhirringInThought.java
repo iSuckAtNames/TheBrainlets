@@ -37,8 +37,8 @@ public class WhirringInThought extends BaseCard {
 
     public WhirringInThought() {
         super(ID, info);
-        setMagic(6);
-        setCustomVar("M2", 5, -1);
+        setMagic(5);
+        setCustomVar("M2", 4, -1);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

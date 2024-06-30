@@ -32,12 +32,17 @@ public class DrunkenDarts extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int dmg = this.damage;
         if (isDeadOn()) {
-            addToBot(new SelfDamageAction(new DamageInfo(p, dmg, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            TriggerDeadOnEffect(p,m);
         } else {
             addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m) {
+        int dmg = this.damage;
+        addToBot(new SelfDamageAction(new DamageInfo(p, dmg, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
     public void triggerOnGlowCheck() {

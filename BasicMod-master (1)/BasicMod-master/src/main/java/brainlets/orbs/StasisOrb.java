@@ -6,6 +6,7 @@ import brainlets.actions.StasisEvokeIfRoomInHandAction;
 import brainlets.cards.BaseCard;
 import brainlets.cards.InStasisCard;
 import brainlets.character.theBrainlets;
+import brainlets.relics.CarbonsSkillbook;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -130,10 +131,14 @@ public class StasisOrb extends AbstractOrb {
             AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this.stasisCard, AbstractDungeon.player.limbo));
         } else {
             if (this.passiveAmount <= 0) {
-                if (stasisCard.cost > 0) {
-                    stasisCard.freeToPlayOnce = true;
+                if (AbstractDungeon.player.hasRelic(CarbonsSkillbook.ID)) {
+                    stasisCard.cost = 1;
                 } else {
-                    stasisCard.tags.remove(BasicMod.STASISGLOW);
+                    if (stasisCard.cost > 0) {
+                        stasisCard.freeToPlayOnce = true;
+                    } else {
+                        stasisCard.tags.remove(BasicMod.STASISGLOW);
+                    }
                 }
             } else {
                 stasisCard.tags.remove(BasicMod.STASISGLOW);

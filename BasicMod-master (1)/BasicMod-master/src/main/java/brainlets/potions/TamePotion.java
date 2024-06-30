@@ -33,9 +33,9 @@ public class TamePotion extends BasePotion {
     public void use(AbstractCreature abstractCreature) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, potency));
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, potency, false), potency));
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, potency, false), potency));
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new InfectionPower(AbstractDungeon.player, potency), potency));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, 2, false), 2));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new InfectionPower(AbstractDungeon.player, 2), 2));
         }
     }
 }

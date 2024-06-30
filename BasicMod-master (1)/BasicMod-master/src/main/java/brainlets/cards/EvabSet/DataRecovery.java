@@ -24,7 +24,6 @@ public class DataRecovery extends BaseCard {
 
     public DataRecovery() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        this.isEthereal = true;
         setBlock(BLOCK,UPG_BLOCK);
     }
 

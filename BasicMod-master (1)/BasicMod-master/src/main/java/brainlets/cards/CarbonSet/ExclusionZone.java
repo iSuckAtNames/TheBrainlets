@@ -40,8 +40,13 @@ public class ExclusionZone extends BaseCard {
             addToBot(new GainBlockAction(mo, p, block));
         }
         if (isDeadOn()) {
-            addToBot(new SelfDamageAction(new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+            TriggerDeadOnEffect(p,m);
         }
+    }
+
+    @Override
+    public void DeadOnEffect(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new SelfDamageAction(new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
     }
 
     public void triggerOnGlowCheck() {

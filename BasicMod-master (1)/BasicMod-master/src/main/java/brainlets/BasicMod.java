@@ -336,6 +336,6 @@ public class BasicMod implements
     }
 
     public static String makeImagePath(String resourcePath) {
-        return modID + "Resources/images/" + resourcePath;
+        return "brainlets/images/" + resourcePath;
     }
 }

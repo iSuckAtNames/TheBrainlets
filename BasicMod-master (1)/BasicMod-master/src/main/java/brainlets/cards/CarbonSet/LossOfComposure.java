@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class LossOfComposure extends BaseCard {
     public static final String ID = makeID("LossOfComposure");
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 4;
 
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
