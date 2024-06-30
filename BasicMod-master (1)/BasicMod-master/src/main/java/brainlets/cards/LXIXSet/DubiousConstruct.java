@@ -48,6 +48,7 @@ public class DubiousConstruct extends BaseCard {
             this.name = this.cardStrings.EXTENDED_DESCRIPTION[0];
             upgradeBaseCost(2);
             this.initializeDescription();
+            this.upgraded = true;
         }
     }
 
