@@ -60,7 +60,7 @@ public class UploadTroublePower extends BasePower implements CloneablePowerInter
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (this.amount > 0 && this.freeCardsThisTurn >= 0) {
+        if (this.amount > 0 && this.freeCardsThisTurn > 0) {
             this.freeCardsThisTurn--;
             flash();
             addToBot(new GainEnergyAction(card.cost));

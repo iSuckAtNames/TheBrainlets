@@ -33,7 +33,7 @@ public class CarbonsSkillbook extends BaseRelic implements OnCreateCardInterface
 
     @Override
     public int changeNumberOfCardsInReward(int numberOfCards) {
-        return numberOfCards + 1;
+        return numberOfCards + 2;
     }
 
     public void justEnteredRoom(AbstractRoom room) {
@@ -46,16 +46,21 @@ public class CarbonsSkillbook extends BaseRelic implements OnCreateCardInterface
 
     public void update() {
         super.update();
-        if (AbstractDungeon.player.hasRelic(PrismaticShard.ID)) {
-            receivedShard = true;
-        }
-        if (!AbstractDungeon.isScreenUp && !receivedShard) {
-            AbstractDungeon.combatRewardScreen.open();
-            AbstractDungeon.combatRewardScreen.rewards.clear();
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(RelicLibrary.getRelic(PrismaticShard.ID).makeCopy()));
-            receivedShard = true;
-            AbstractDungeon.combatRewardScreen.positionRewards();
-            (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.25F;  
+        if (AbstractDungeon.id != null) {
+            if (AbstractDungeon.getCurrRoom() != null) {
+                if (AbstractDungeon.player.hasRelic(PrismaticShard.ID)) {
+                    receivedShard = true;
+                }
+                if (!AbstractDungeon.isScreenUp && !receivedShard) {
+                    AbstractDungeon.combatRewardScreen.open();
+                    AbstractDungeon.combatRewardScreen.rewards.clear();
+                    AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(RelicLibrary.getRelic(PrismaticShard.ID).makeCopy()));
+                    receivedShard = true;
+                    AbstractDungeon.shopRelicPool.removeIf(id -> id.equals(PrismaticShard.ID));
+                    AbstractDungeon.combatRewardScreen.positionRewards();
+                    (AbstractDungeon.getCurrRoom()).rewardPopOutTimer = 0.25F;
+                }
+            }
         }
     }
 

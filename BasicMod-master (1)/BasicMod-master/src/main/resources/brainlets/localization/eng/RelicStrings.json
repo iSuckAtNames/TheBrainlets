@@ -53,7 +53,7 @@
     "NAME": "Carbon's Skillbook",
     "FLAVOR": "Filled with pages upon pages of nonsense strings of text.",
     "DESCRIPTIONS": [
-      "ALL cards cost #b1, except for X cost and #yUnplayable cards. NL Future card rewards have #b1 additional card to choose from. NL Upon pickup, if you do not have one already, obtain a Prismatic Shard."
+      "ALL cards cost #b1, except for X cost and #yUnplayable cards. NL Future card rewards have #b2 additional cards to choose from. NL Upon pickup, if you do not have one already, obtain a Prismatic Shard."
     ]
   }
 }

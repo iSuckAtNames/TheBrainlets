@@ -23,8 +23,7 @@
   },
   "${modID}:MarkThePath": {
     "NAME": "Mark The Path",
-    "DESCRIPTION": "Deal !D! damage. NL Place a random card from your hand into ${modID}:Stasis. NL ${modID}:Dead_On: Shuffle !M! Voids into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place a card from your hand into ${modID}:Stasis. NL ${modID}:Dead_On: Shuffle !M! Voids into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Place a card from your hand into ${modID}:Stasis. NL ${modID}:Dead_On: Shuffle !M! Voids into your draw pile."
   },
   "${modID}:MementosBlade": {
     "NAME": "Memento's Blade",

@@ -1,7 +1,6 @@
 package brainlets.cards.Basic;
 
 import brainlets.actions.PlaceCardsInHandIntoStasisAction;
-import brainlets.actions.PlaceRandomCardInHandIntoStasisAction;
 import brainlets.cards.BaseCard;
 import brainlets.character.theBrainlets;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,18 +22,14 @@ public class MarkThePath extends BaseCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 14;
 
     private static final int MAGIC = 2;
-
-    public static String UPGRADED_DESCRIPTION;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
     private static final brainlets.util.CardStats info = new brainlets.util.CardStats(
             theBrainlets.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
@@ -46,7 +41,7 @@ public class MarkThePath extends BaseCard {
 
     public MarkThePath() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+        setDamage(DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         setMagic(MAGIC);
         this.tags.add(DEADON);
         this.cardsToPreview = new VoidCard();
@@ -57,11 +52,7 @@ public class MarkThePath extends BaseCard {
         if (isDeadOn()) {
             TriggerDeadOnEffect(p,m);
         }
-        if (!upgraded) {
-            this.addToBot(new PlaceRandomCardInHandIntoStasisAction(p));
-        } else {
-            this.addToBot(new PlaceCardsInHandIntoStasisAction(p, 1, false));
-        }
+        this.addToBot(new PlaceCardsInHandIntoStasisAction(p, 1, false));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
@@ -76,8 +67,7 @@ public class MarkThePath extends BaseCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            this.rawDescription = UPGRADED_DESCRIPTION;
+            upgradeBaseCost(1);
             initializeDescription();
         }
     }
