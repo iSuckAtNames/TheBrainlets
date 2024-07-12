@@ -1,7 +1,7 @@
 {
   "modid": "${modID}",
   "name": "${project.name}",
-  "author_list": ["${author}"],
+  "author_list": ["d/dx(6x^70)"],
   "description": "!(project.description)",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",

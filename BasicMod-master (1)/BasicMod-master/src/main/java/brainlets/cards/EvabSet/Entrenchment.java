@@ -29,17 +29,25 @@ public class Entrenchment extends BaseCard {
             AbstractCard.CardType.POWER,
             AbstractCard.CardRarity.RARE,
             AbstractCard.CardTarget.SELF,
-            2
+            3
     );
 
     public Entrenchment() {
         super(ID,info);
-        setMagic(1,1);
+        setMagic(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new EntrenchmentPower(p, magicNumber), magicNumber));
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBaseCost(2);
+            initializeDescription();
+        }
     }
 
     @Override

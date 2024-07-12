@@ -65,7 +65,7 @@ public class theBrainlets extends CustomPlayer {
 
     public theBrainlets() {
         super(NAMES[0], Enums.TheBrainlets,
-                new CustomEnergyOrb(null, null, null),
+                new CustomEnergyOrb(orbTextures, makeImagePath("character/orb/vfx.png"), layerSpeeds),
                 new AbstractAnimation() { //Change the animation line to this.
                     @Override
                     public Type type() {
@@ -219,4 +219,23 @@ public class theBrainlets extends CustomPlayer {
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;
     }
+
+    private static final String[] orbTextures = {
+            makeImagePath("character/orb/layer1.png"),
+            makeImagePath("character/orb/layer2.png"),
+            makeImagePath("character/orb/layer3.png"),
+            makeImagePath("character/orb/layer4.png"),
+            makeImagePath("character/orb/layer5.png"),
+            makeImagePath("character/orb/layer6.png"), //The middle image is treated as the "top" of the energy orb
+            makeImagePath("character/orb/layer1d.png"),
+            makeImagePath("character/orb/layer2d.png"),
+            makeImagePath("character/orb/layer3d.png"),
+            makeImagePath("character/orb/layer4d.png"),
+            makeImagePath("character/orb/layer5d.png")
+    };
+
+    private static final float[] layerSpeeds = new float[]{
+            20.0F, 30.0F, -40.0F, 20.0F, 0.0F
+    };
+
 }

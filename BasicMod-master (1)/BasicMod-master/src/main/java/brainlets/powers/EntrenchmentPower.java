@@ -48,11 +48,6 @@ public class EntrenchmentPower extends BasePower implements CloneablePowerInterf
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    public void onEvokeOrb(AbstractOrb o) {
-        if (o instanceof StasisOrb) {
-            addToBot(new ApplyPowerAction(owner, owner, new PlatedArmorPower(owner, amount), amount));
-        }
-    }
 
 
     @Override

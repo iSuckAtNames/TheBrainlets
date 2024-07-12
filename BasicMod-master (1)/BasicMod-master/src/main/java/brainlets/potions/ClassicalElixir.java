@@ -1,8 +1,10 @@
 package brainlets.potions;
 
 import brainlets.actions.ReduceDebuffsAction;
+import brainlets.character.theBrainlets;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -19,6 +21,7 @@ public class ClassicalElixir extends BasePotion{
 
     public ClassicalElixir() {
         super(ID, 3, PotionRarity.RARE, PotionSize.SPHERE, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR);
+        playerClass = theBrainlets.Enums.TheBrainlets;
     }
 
     @Override

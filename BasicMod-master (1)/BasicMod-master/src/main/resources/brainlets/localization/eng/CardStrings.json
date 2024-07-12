@@ -157,7 +157,7 @@
   },
   "${modID}:TemperingProtocol": {
     "NAME": "Tempering Protocol",
-    "DESCRIPTION": "Whenever you lose Dexterity, gain !M! Block."
+    "DESCRIPTION": "Whenever you lose a buff, gain !M! Block."
   },
   "${modID}:Slashnado": {
     "NAME": "Slashnado",
@@ -190,7 +190,8 @@
   },
   "${modID}:DesperateAssault": {
     "NAME": "Desperate Assault",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Soulburn. NL Exhaust 2 random cards in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Soulburn. NL Exhaust 2 random cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${modID}:Soulburn. NL Exhaust 2 cards in your hand."
   },
   "${modID}:Prestidigitation": {
     "NAME": "Prestidigitation",
@@ -337,7 +338,7 @@
   },
   "${modID}:Entrenchment": {
     "NAME": "Entrenchment",
-    "DESCRIPTION": "Whenever a card leaves ${modID}:Stasis, gain !M! *Plated *Armor."
+    "DESCRIPTION": "Whenever a card ${modID}:Ticks in ${modID}:Stasis, gain !M! *Plated *Armor."
   }
 }
 

@@ -1,7 +1,8 @@
 package brainlets.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import brainlets.util.OnBuffLossPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -9,11 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 
 import static brainlets.BasicMod.makeID;
 
-public class TemperingProtocolPower extends BasePower implements CloneablePowerInterface {
+public class TemperingProtocolPower extends BasePower implements CloneablePowerInterface, OnBuffLossPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = makeID("TemperingProtocolPower");
@@ -42,21 +42,18 @@ public class TemperingProtocolPower extends BasePower implements CloneablePowerI
         updateDescription();
     }
 
+    @Override
+    public void onBuffLoss() {
+            flash();
+            addToBot(new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
+    }
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-
     }
 
-    @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID == DexterityPower.POWER_ID && target == this.owner && power.amount < 0 && !target.hasPower("Artifact")) {
-            flash();
-            addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
-        }
-    }
 
     @Override
     public AbstractPower makeCopy() {

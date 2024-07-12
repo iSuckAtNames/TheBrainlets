@@ -8,6 +8,7 @@ import brainlets.character.theBrainlets;
 import brainlets.orbs.StasisOrb;
 import brainlets.potions.BasePotion;
 import brainlets.relics.BaseRelic;
+import brainlets.util.BuffLossManager;
 import brainlets.util.GeneralUtils;
 import brainlets.util.KeywordInfo;
 import brainlets.util.TextureLoader;
@@ -30,6 +31,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import org.apache.logging.log4j.LogManager;
@@ -46,12 +48,15 @@ public class BasicMod implements
         EditCardsSubscriber,
         PostInitializeSubscriber,
         EditCharactersSubscriber,
-        EditRelicsSubscriber{
+        EditRelicsSubscriber,
+        OnPowersModifiedSubscriber,
+        OnStartBattleSubscriber,
+        OnPlayerTurnStartSubscriber{
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
     static { loadModInfo(); }
     public static final Logger logger = LogManager.getLogger(modID); //Used to output to the console.
-    private static final String resourcesFolder = checkResourcesPath();;
+    private static final String resourcesFolder = checkResourcesPath();
     private static final String BG_ATTACK = characterPath("cardback/bg_attack.png");
     private static final String BG_ATTACK_P = characterPath("cardback/bg_attack_p.png");
     private static final String BG_SKILL = characterPath("cardback/bg_skill.png");
@@ -94,6 +99,7 @@ public class BasicMod implements
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
         new BasicMod();
+
 
         BaseMod.addColor(theBrainlets.Enums.CARD_COLOR, cardColor,
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
@@ -333,6 +339,22 @@ public class BasicMod implements
         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
 
         return false;
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        BaseCard.deadOnThisTurn.clear();
+        BuffLossManager.resetBuffTracker();
+    }
+
+    public void receiveOnPlayerTurnStart() {
+        BaseCard.deadOnThisTurn.clear();
+    }
+
+
+    @Override
+    public void receivePowersModified() {
+        BuffLossManager.onPowersModified();
     }
 
     public static String makeImagePath(String resourcePath) {

@@ -75,7 +75,7 @@
   "${modID}:TemperingProtocolPower": {
     "NAME": "Tempering Protocol",
     "DESCRIPTIONS": [
-      "Whenever you lose #yDexterity, gain #b",
+      "Whenever you lose a buff, gain #b",
       " #yBlock."
     ]
   },
@@ -148,7 +148,7 @@
   "${modID}:EntrenchmentPower": {
     "NAME": "Entrenched",
     "DESCRIPTIONS": [
-      "Whenever a card leaves #yStasis, gain #b",
+      "Whenever a card #yTicks in #yStasis, gain #b",
       " #yPlated #yArmor."
     ]
   }

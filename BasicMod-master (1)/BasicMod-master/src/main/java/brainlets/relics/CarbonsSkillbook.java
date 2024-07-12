@@ -45,6 +45,9 @@ public class CarbonsSkillbook extends BaseRelic implements OnCreateCardInterface
 
     public void update() {
         super.update();
+        //Yes, this is THREE wrappers
+        //I need all three to prevent the game from triggering these checks in places it REALLY shouldn't
+        //SandTag's Paella has a similar set of wrappers
         if (shouldUpdate) {
             if (AbstractDungeon.id != null) {
                 if (AbstractDungeon.getCurrRoom() != null) {
@@ -62,6 +65,7 @@ public class CarbonsSkillbook extends BaseRelic implements OnCreateCardInterface
                     }
                 }
             }
+            shouldUpdate = false;
         }
     }
 
@@ -88,6 +92,22 @@ public class CarbonsSkillbook extends BaseRelic implements OnCreateCardInterface
             card.freeToPlayOnce = false;
         }
     }
+
+    public void atBattleStart() {
+        for (int i = 0; i < AbstractDungeon.player.drawPile.size(); i++) {
+            AbstractCard card = AbstractDungeon.player.drawPile.getNCardFromTop(i);
+            if (card.cost >= 0) {
+                int newCost = 1;
+                if (card.cost != newCost) {
+                    card.cost = newCost;
+                    card.costForTurn = card.cost;
+                    card.isCostModified = true;
+                }
+                card.freeToPlayOnce = false;
+            }
+        }
+    }
+
 
 
     public AbstractRelic makeCopy() {

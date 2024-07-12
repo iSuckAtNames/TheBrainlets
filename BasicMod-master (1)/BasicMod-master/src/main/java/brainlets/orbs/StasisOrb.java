@@ -6,9 +6,11 @@ import brainlets.actions.StasisEvokeIfRoomInHandAction;
 import brainlets.cards.BaseCard;
 import brainlets.cards.InStasisCard;
 import brainlets.character.theBrainlets;
+import brainlets.powers.EntrenchmentPower;
 import brainlets.relics.CarbonsSkillbook;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,6 +20,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import vfx.AddCardToStasisEffect;
 
@@ -115,7 +118,9 @@ public class StasisOrb extends AbstractOrb {
 
             updateDescription();
         }
-
+        if (AbstractDungeon.player.hasPower(EntrenchmentPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, AbstractDungeon.player.getPower(EntrenchmentPower.POWER_ID).amount), AbstractDungeon.player.getPower(EntrenchmentPower.POWER_ID).amount));
+        }
         if (this.passiveAmount <= 0) {
             AbstractDungeon.actionManager.addToTop(new StasisEvokeIfRoomInHandAction(this));
         }
@@ -131,7 +136,7 @@ public class StasisOrb extends AbstractOrb {
             AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this.stasisCard, AbstractDungeon.player.limbo));
         } else {
             if (this.passiveAmount <= 0) {
-                if (AbstractDungeon.player.hasRelic(CarbonsSkillbook.ID)) {
+                if (AbstractDungeon.player.hasRelic(CarbonsSkillbook.ID) && stasisCard.cost >= 0) {
                     stasisCard.cost = 1;
                 } else {
                     if (stasisCard.cost > 0) {

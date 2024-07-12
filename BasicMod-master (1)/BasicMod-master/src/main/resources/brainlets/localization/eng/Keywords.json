@@ -39,7 +39,9 @@
   "DESCRIPTION": "Increase the turn counter of the right-most card in #yStasis by #b1."
   }, {
   "NAMES": [
-    "tick"
+    "tick",
+    "Ticks",
+    "ticks"
   ],
   "PROPER_NAME": "Tick",
   "DESCRIPTION": "When this card's #yStasis turn counter is reduced..."
