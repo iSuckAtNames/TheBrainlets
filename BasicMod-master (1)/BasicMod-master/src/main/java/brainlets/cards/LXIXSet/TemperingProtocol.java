@@ -27,25 +27,17 @@ public class TemperingProtocol extends BaseCard {
             AbstractCard.CardType.POWER,
             AbstractCard.CardRarity.UNCOMMON,
             AbstractCard.CardTarget.SELF,
-            2
+            1
     );
 
     public TemperingProtocol() {
         super(ID,info);
-        setMagic(3);
+        setMagic(3,1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new TemperingProtocolPower(p, magicNumber), magicNumber));
-    }
-
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeBaseCost(1);
-        }
     }
 
     @Override
