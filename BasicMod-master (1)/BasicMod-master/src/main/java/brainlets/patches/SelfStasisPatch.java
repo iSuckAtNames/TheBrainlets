@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import javassist.CtBehavior;
 
 public class SelfStasisPatch {
-    private static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
+    private static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Brainlets:UIOptions").TEXT;
 
     @SpirePatch(
             clz = UseCardAction.class,
